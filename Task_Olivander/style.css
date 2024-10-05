@@ -1,0 +1,47 @@
+
+.jumbotron {
+    background-color: rgba(255, 255, 255, 0.75) !important; /* Sfondo trasparente */
+}
+
+.bgh {
+    /* The image used */
+    background-image: url("img/sfondo_olivander1.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: auto;
+    height: 100%;
+
+
+}
+.bgv {
+    /* The image used */
+    background-image: url("img/gestisci_bacchette1.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: auto;
+    height: 100%;
+
+
+}
+
+@media (min-width: 1120px),
+(min-height: 630px) {
+    body {
+        background-size: auto;
+    }
+}
+
