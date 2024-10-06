@@ -12,8 +12,8 @@ function aggiungi(){
     let varFoto = document.getElementById("input-foto").value;
     let varCasata = $("#inputGroupSelect01").val();
     let varCodice = genera();
-    if(varCasata=="Scegli una casata"){
-        varCasata="N.D.";
+    if(varCasata =="Scegli una casata"){
+       varCasata = "N.D.";
     }
 
     let bac = {

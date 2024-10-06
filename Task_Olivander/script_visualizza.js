@@ -32,6 +32,8 @@ function stampaTabella(){
 
 
 function elimina(indice){
+    console.log(indice);
+
     let elencoLocale = localStorage.getItem("bacchetta") != null 
                             ? JSON.parse(localStorage.getItem("bacchetta")) : [];
 
@@ -44,10 +46,11 @@ function elimina(indice){
 
 function modifica(indice){
     $("#modaleModifica").modal('show');
-    $("#btn-salva").data('identif', indice);
+    $("#btn-salva1").data('identif', indice);
 
     let elencoLocale = localStorage.getItem("bacchetta") != null 
                             ? JSON.parse(localStorage.getItem("bacchetta")) : [];
+    console.log(indice);
 
     for(let [idx, item] of elencoLocale.entries()){
       
@@ -61,15 +64,18 @@ function modifica(indice){
             document.getElementById("input-resistenza1").value = item.resistenza;
             document.getElementById("input-utilizzo1").value = item.utilizzo;
             document.getElementById("input-foto1").value = item.foto;
-            $("#inputGroupSelect01").val(item.casata);
+            document.getElementById("inputGroupSelect011").value = item.casata;
+            // $("#inputGroupSelect011").val(item.casata);
+
             console.log(item.casata);
         }
     }
 }
 
 function salva(varBottone){
-    console.log(varBottone);
+    console.log("varBottone"+ varBottone);
     let posizione = $(varBottone).data('identif');
+    console.log("dopovarbottone"+ posizione);
     let varNome = document.getElementById("input-nome1").value;
     let varMago = document.getElementById("input-mago1").value;
     let varMateriale = document.getElementById("input-materiale1").value;
@@ -88,9 +94,7 @@ function salva(varBottone){
                             ? JSON.parse(localStorage.getItem("bacchetta")) : [];
 
     for(let [idx, item] of elencoLocale.entries()){
-        console.log(posizione);
-        console.log(idx);
-
+  
 
         if(idx == posizione){
             item.nome = varNome;

@@ -42,7 +42,7 @@ function elimina(indice){
 
 function modificaCasata(indice){
     $("#modaleModificaCasata").modal('show');
-    $("#btn-salva").data('identif', indice);
+    $("#btn-salva2").data('identif', indice);
 
     let elencoLocaleCas2 = localStorage.getItem("casate") != null 
                             ? JSON.parse(localStorage.getItem("casate")) : [];
